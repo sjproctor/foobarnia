@@ -8,8 +8,7 @@ JavaScript.
 The candidates are identified by positive integers, and the votes will be
 provided to us as an unsorted Array of those integers.
 
-  1. If any candidate reaches a majority of votes, the function should return a
-single-element Array with the integer representing the winning candidate.
+  1. If any candidate reaches a majority of votes, the function should return a single-element Array with the integer representing the winning candidate.
   2. If there is no majority winner, then a runoff election will be held among the 3
 candidates that finished with the most votes. So in that case, our function
 needs to return an array of integers for the top 3 candidates, to identify
@@ -47,4 +46,3 @@ Furthermore, anyone can run for president simply by sending a postcard to the
 election office, so there are typically *several thousand* candidates. How will
 your function behave under these circumstances? Should we be concerned about
 performance? Is there any way we can make it faster?
-
