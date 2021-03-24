@@ -8,6 +8,7 @@ describe AutoSeeker do
       [2,'Blue',13999,25.0,'gas'],
       [3,'Teal',19000,27.0,'gas'],
       [4,'Red',14999,40.0,'diesel'],
+      [5,'Teal',18999,nil,'hamster'],
     ]
     @seeker = AutoSeeker.new data
   end
@@ -24,5 +25,11 @@ describe AutoSeeker do
     it "calculates median mileage for all autos" do
       AutoSeeker.median_mileage(@seeker.autos).must_equal 26.0
     end
+    it "calculates median mileage for teal cars" do
+      @seeker.filter 'color', 'Teal'
+      @seeker.autos.collect(&:mileage).compact.must_equal [27.0]
+    end
   end
+
+
 end

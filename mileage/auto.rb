@@ -1,5 +1,6 @@
 class Auto
-  attr_reader :color, :price, :name, :mileage
+  attr_reader :color, :price, :name, :mileage, :fuel
+  # to sort by fuel type, needed to add fuel method
 
   def initialize data
     @color = data[1]

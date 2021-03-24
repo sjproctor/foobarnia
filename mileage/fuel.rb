@@ -8,12 +8,12 @@ data = CSV.read('foobarnian_autos.csv')
 seeker = AutoSeeker.new data
 
 # Array of instances with @color @price @mileage @fuel where the color matches the user input in the CL
-autos = seeker.filter(:color, ARGV[0])
+autos = seeker.filter(:fuel, ARGV[0])
 
 if autos.length == 0
-  abort "no autos with color #{ARGV[0]} found"
+  abort "no autos with fuel type #{ARGV[0]} found"
 end
 
-mileage = AutoSeeker.median_mileage(autos)
+car_number = AutoSeeker.fuel_filter(autos)
 
-puts "median mileage = #{mileage} MPG"
+puts "There are #{car_number} cars that are use #{ARGV[0]} for fuel"
